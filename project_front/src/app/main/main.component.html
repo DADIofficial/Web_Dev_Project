@@ -1,0 +1,29 @@
+<div class="container">
+    <p class="NameofBrand">AirDOS</p>
+    <div class="div1">
+        <div class="left navigationmenuleft">
+            <a [routerLink]="['/AirPassage']" class = "buttonOfNavigation">Air passage</a>
+            <a [routerLink]="['/Hotels']" class = "buttonOfNavigation">Hotel</a>
+            <a *ngIf="isUserManager" [routerLink]="['/Tickets']" class = "buttonOfNavigation">Tickets</a>
+            <a *ngIf="isUserManager" [routerLink]="['/AdminHotels']" class = "buttonOfNavigation">AdminHotels</a>
+
+        </div>
+        <div class="right navigationmenuright">
+            <a href="#" class = "buttonOfNavigation">Help</a>
+            
+            <a *ngIf="userName.length == 0" [routerLink]="['/Login']" class = "buttonOfNavigation">Log in</a>
+
+            <a *ngIf="userName.length > 0" href='#' class = "buttonOfNavigation" (click)="logout()">Log out</a>
+
+            
+
+            <a class = "buttonOfNavigation" [routerLink]="['/AccountDetail']">{{userName}}</a>
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+

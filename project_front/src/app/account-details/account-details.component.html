@@ -1,0 +1,16 @@
+<div *ngIf="user.length > 0">
+    <p>Nickname: {{ user[0].nickname }}</p>
+    <p>Email: {{ user[0].mail }}</p>
+</div>
+<br>
+<div *ngFor="let ticket of tickets" class="airPassagebar ChoiceTicket">
+    <div class="leftborderradius detailsAirPassageBar"><p>City 1: {{ ticket.city1 }}</p></div>
+    <div class="detailsAirPassageBar"><p>City 2: {{ ticket.city2 }}</p></div>
+    <div class="detailsAirPassageBar"><p>Cost: {{ ticket.cost }}</p></div>
+    <div class="detailsAirPassageBar"><p>Company: {{ ticket.company }}</p></div>
+    <div class="detailsAirPassageBar fontSmall"><p>Departure Date: {{ ticket.depar_date | date }}</p></div>
+    <div class="detailsAirPassageBar fontSmall"><p>Departure Time: {{ ticket.depar_time }}</p> </div>
+    <div class="detailsAirPassageBar fontSmall"><p>Arrival Date: {{ ticket.Arrival_date | date: 'dd/MM/yyyy' }}</p></div>
+    <div class="rightborderradius detailsAirPassageBar fontSmall"><p>Arrival Time: {{ ticket.Arrival_time }}</p></div>
+</div>
+

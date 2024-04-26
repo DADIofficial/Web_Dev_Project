@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="middlename">Hotel</h1>
+  <div class="airPassagebar">
+      <input class="leftborderradius inputAirPassageBar" placeholder="City"> 
+      <input class="inputAirPassageBar " placeholder="Arrival"> 
+      <input class="inputAirPassageBar" placeholder="Departure"> 
+      <input class="inputAirPassageBar" placeholder="Number of people">  
+      <button class="rightborderradius buttonAirPassageBar">Find</button>
+  </div>
+</div>
+<div *ngFor="let hotel of hotels" class="airPassagebar ChoiceTicket">
+  <div class="detailsAirPassageBar leftborderradius"><p>{{hotel.id}}</p></div> 
+  <div class="detailsAirPassageBar"><p>{{hotel.city}}</p></div>
+  <div class="detailsAirPassageBar"><p>{{hotel.name}}</p></div>
+  <button class="rightborderradius buttonAirPassageBar greenForBuy">Buy</button>
+</div>

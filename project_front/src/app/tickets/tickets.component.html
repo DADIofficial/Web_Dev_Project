@@ -1,0 +1,38 @@
+
+<div class="airPassagebar">
+  <input [(ngModel)]="newticId" class="leftborderradius inputAirPassageBar">  
+    <input [(ngModel)]="city1" class="inputAirPassageBar">
+    <input [(ngModel)]="city2" class="inputAirPassageBar">
+    <input [(ngModel)]="cost" class="inputAirPassageBar">
+    <input [(ngModel)]="company" class="inputAirPassageBar">
+    <input type="date" [(ngModel)]="depar_date" class="inputAirPassageBar">
+    <input type="time" [(ngModel)]="depar_time" class="inputAirPassageBar">
+    <input type="date" [(ngModel)]="arrival_date" class="inputAirPassageBar">
+    <input type="time" [(ngModel)]="arrival_time" class="inputAirPassageBar">
+    <input [(ngModel)]="count" class="inputAirPassageBar">
+    <button (click)="updateTickets()" class="buttonAirPassageBar">Update</button>
+    <button (click)="createTickets()" class="rightborderradius buttonAirPassageBar">Create</button>
+</div>
+<br>
+
+<div *ngFor="let ticket of tickets" class="con">
+<div class="airPassagebar ChoiceTicket">
+  <div class="detailsAirPassageBar leftborderradius"><p>{{ ticket.id }}</p></div>
+  <div class="detailsAirPassageBar"><p>{{ ticket.city1 }}</p></div>
+  <div class="detailsAirPassageBar"><p>{{ ticket.city2 }}</p></div>
+  <div class="detailsAirPassageBar rightborderradius"><p>{{ ticket.cost }}</p></div>
+</div>
+<div class="airPassagebar ChoiceTicket blue">
+  <div class="detailsAirPassageBar leftborderradius"><p>Departure:</p></div>
+  <div class="detailsAirPassageBar"><p>{{ ticket.depar_date | date: 'dd/MM/yyyy' }} </p></div>
+  <div class="detailsAirPassageBar rightborderradius"><p>{{ ticket.depar_time }}</p></div>
+</div>
+<div class="airPassagebar ChoiceTicket green">
+  <div class="detailsAirPassageBar leftborderradius"><p>Arrival:</p></div>
+  <div class="detailsAirPassageBar"><p>{{ ticket.Arrival_date | date: 'dd/MM/yyyy' }} </p></div>
+  <div class="detailsAirPassageBar"><p>{{ ticket.Arrival_time }}</p></div>
+  <button (click)="deleteTicket(ticket.id)" class="buttonAirPassageBar rightborderradius">Delete</button>
+</div>
+</div>
+
+
